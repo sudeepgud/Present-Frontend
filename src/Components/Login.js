@@ -11,7 +11,7 @@ export default function Login(){
     const handleSubmit = async(event)=>{
         event.preventDefault();
         try{
-            const {data} = await axios.post('http://localhost:3001/login',{...log})
+            const {data} = await axios.post(process.env.REACT_APP_BACKEND_URL+'/login',{...log})
             if(data.email){
                 document.getElementById('emailred').innerHTML = data.email;
             }
