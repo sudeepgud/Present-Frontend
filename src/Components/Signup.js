@@ -95,10 +95,10 @@ export default function SignUp(){
         <center>
             <form className="col-md-5 card rounded border p-4" onSubmit={(e)=>{handleSubmit(e)}}>
                 <label className="fw-bold mt-2">Enter Username :</label>
-                <input type="text" className="form-control" name="name" placeholder="Enter Username..." onChange={(e)=>setDetails({...sign,name:e.target.value})}/>
+                <input type="text" className="form-control" name="name" placeholder="Enter Username..." onChange={(e)=>setDetails({...sign,name:e.target.value})} autoComplete='off'/>
                 <p id="userred" className="text-danger d-flex fs-6 fw-light m-0"></p>
                 <label className="fw-bold">Enter Email :</label>
-                <input type="email" className="form-control" name="email" placeholder="Enter E-mail..." onChange={(e)=>setDetails({...sign,email:e.target.value})}/>
+                <input type="email" className="form-control" name="email" placeholder="Enter E-mail..." onChange={(e)=>setDetails({...sign,email:e.target.value})} autoComplete='off'/>
                 <p id="emailred" className="text-danger d-flex fs-6 fw-light m-0"></p>
                 <div className="d-flex justify-content-end pb-2">
                     <Link className="text-success link-underline link-underline-opacity-0 fw-lighter" to="/login">Already have an Account?</Link>

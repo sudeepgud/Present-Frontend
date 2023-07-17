@@ -27,7 +27,7 @@ export default function HE(){
         if(file){
             const formData = new FormData();
             formData.append("image",file);
-            const {data} = await axios.post(process.env.REACT_APP_AWS_API+'/ihc_patch',formData);
+            const {data} = await axios.post(process.env.REACT_APP_AWS+'/ihc_patch',formData);
             if(data){
                 setImage(data.image);
                 setOriginal(data.original);
