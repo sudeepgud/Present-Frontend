@@ -45,7 +45,7 @@ export default function HE(){
         <form className="row justify-content-center" onSubmit={(e)=>handleFormSubmit(e)}>
         <h1 className="m-4 text-center"><span className='text-danger'>HE</span> Patch Creation</h1>
         <div className="col-9 m-4 p-4 rounded bg-light">
-            <p className="fw-bold m-2">Input H&E Patch Image : </p>
+            <p className="fw-bold m-2">Input IHC Patch Image : </p>
             <input className="form-control form-control-sm" type="file" onChange={FileChange}/>
             <div className="d-flex justify-content-end">
                 <p id="filered" className="outred fs-6 fw-lighter"></p>
