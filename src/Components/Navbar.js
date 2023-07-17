@@ -25,6 +25,9 @@ export default function Navbar(){
                     isUser?
                     <ul className='navbar-nav'>
                         <li className='me-4 nav-item'>
+                            <Link className='btn btn-dark' to='/prevcnn'>Previous Results</Link>
+                        </li>
+                        <li className='me-4 nav-item'>
                             <button className='btn btn-dark' onClick={e=>LogOut(e)}>Log Out</button>
                         </li>
                     </ul>

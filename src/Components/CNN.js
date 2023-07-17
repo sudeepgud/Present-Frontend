@@ -42,7 +42,7 @@ export default function CNN(){
         }
         const {data} = await axios.post(process.env.REACT_APP_BACKEND_URL+'/uploadlabel',sendImage);
         if(data.status === "ok"){
-            Navigate('/');
+            Navigate('/cnn');
         }
     }
     const handleFormSubmit=async(event)=>{
@@ -52,7 +52,7 @@ export default function CNN(){
         if(file){
             const formData = new FormData();
             formData.append("image",file);
-            const {data} = await axios.post(process.env.REACT_APP_MALARIA_PREDICT,formData);
+            const {data} = await axios.post(process.env.REACT_APP_AWS+'/predict',formData);
             if(data){
                 setOutput(data.prediction);
                 setPredicted(true);
@@ -80,7 +80,7 @@ export default function CNN(){
                     predicting?
                     <button className="btn log-button disabled">Predicting<div className='ms-2 spinner-border spinner-border-sm' role='status'><span className='visually-hidden'>Loading...</span></div></button>
                     :
-                    <button className="btn log-button" type="submit">Predict</button>    
+                    <button className="btn btn-primary" type="submit">Predict</button>    
                 }
             </div>
             <div className="container-fluid text-center">
@@ -99,15 +99,15 @@ export default function CNN(){
                 <div className="rounded border border-dark log-welcome">
                     <h3 className="fs-2">&nbsp;Is the Prediction Right?</h3>
                     <div className="form-check form-check-inline">
-                        <input className="form-check-input" type="checkbox" id="Yes"checked={correct} style={{backgroundColor:"rgb(255, 0, 128)"}} onChange={handleCheckBox}/>
+                        <input className="form-check-input" type="checkbox" id="Yes"checked={correct} onChange={handleCheckBox}/>
                         <label className="form-check-label">Yes</label>
                     </div>
                     <div className="form-check form-check-inline">
-                        <input className="form-check-input" type="checkbox" id="No" checked={wrong} style={{backgroundColor:"rgb(255, 0, 128)"}} onChange={handleCheckBox}/>
+                        <input className="form-check-input" type="checkbox" id="No" checked={wrong}  onChange={handleCheckBox}/>
                         <label className="form-check-label">No</label>
                     </div>
                     <div className="d-flex m-3 justify-content-center">
-                        <button className="btn log-button" onClick={(e)=>uploadLabel(e)}>Submit</button>
+                        <button className="btn btn-primary" onClick={(e)=>uploadLabel(e)}>Submit</button>
                     </div>
                 </div>
             </>
