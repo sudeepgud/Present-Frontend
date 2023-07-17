@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import {Link,Outlet} from 'react-router-dom';
+import {Link,Outlet,useNavigate} from 'react-router-dom';
 export default function Navbar(){
+    const Navigate = useNavigate();
     const [isUser,setUser] = useState(false);
     function LogOut(e){
         localStorage.removeItem('jwt');
         setUser(false);
-        window.location.reload(true);
+        Navigate('/');
     }
     useEffect(()=>{
         if(localStorage.getItem('jwt')!=null){
