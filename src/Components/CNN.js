@@ -68,7 +68,7 @@ export default function CNN(){
     return (
     <div className="container-fluid log-welcome">
         <form className="row justify-content-center" onSubmit={(e)=>handleFormSubmit(e)}>
-        <h1 className="m-4 text-center"><span style={{color:"rgb(255, 0, 128)"}}>Malaria</span> Prediction</h1>
+        <h1 className="m-4 text-center"><span style={{color:"rgb(255, 0, 128)"}}>Malaria</span> Classification</h1>
         <div className="col-9 m-4 p-4 rounded bg-light">
             <p className="fw-bold m-2">Input Scan Image : </p>
             <input className="form-control form-control-sm" type="file" onChange={FileChange}/>
