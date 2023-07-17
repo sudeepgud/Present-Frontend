@@ -76,7 +76,7 @@ export default function Yolo(){
             <div className="d-flex justify-content-end m-3">
                 {
                     predicting?
-                    <button className="btn  disabled">Predicting<div className='ms-2 spinner-border spinner-border-sm' role='status'><span className='visually-hidden'>Loading...</span></div></button>
+                    <button className="btn disabled">Predicting<div className='ms-2 spinner-border spinner-border-sm' role='status'><span className='visually-hidden'>Loading...</span></div></button>
                     :
                     <button className="btn btn-primary" type="submit">Predict</button>    
                 }
@@ -85,7 +85,7 @@ export default function Yolo(){
                     {
             predicted?
             <>
-                <img className="w-25" src={"data:image/png;base64,"+image} alt='preview'/>
+                <img className="w-50" src={"data:image/png;base64,"+image} alt='preview'/>
                 <br></br>
                 <div className='card w-75 mt-2 container'>
                     <h5 className='card-title fs-3'><span style={{color:"rgb(0,128,256)"}}>Model</span> Output</h5>
