@@ -42,7 +42,7 @@ export default function CNN(){
         }
         const {data} = await axios.post(process.env.REACT_APP_BACKEND_URL+'/uploadlabel',sendImage);
         if(data.status === "ok"){
-            Navigate('/cnn');
+            window.location.reload(true);
         }
     }
     const handleFormSubmit=async(event)=>{
