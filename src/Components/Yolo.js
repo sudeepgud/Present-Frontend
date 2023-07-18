@@ -66,7 +66,7 @@ export default function Yolo(){
     return (
     <div className="container-fluid ">
         <form className="row justify-content-center" onSubmit={(e)=>handleFormSubmit(e)}>
-        <h1 className="m-4 text-center"><span style={{color:"rgb(0,128,256)"}}>Malaria</span> Classification using <span style={{color:"rgb(0,128,256)"}}>Yolov5</span> model</h1>
+        <h1 className="m-4 text-center"><span style={{color:"rgb(0,128,256)"}}>Malaria</span> Detection using <span style={{color:"rgb(0,128,256)"}}>Yolov5</span> model</h1>
         <div className="col-9 m-4 p-4 rounded bg-light">
             <p className="fw-bold m-2">Input Image : </p>
             <input className="form-control form-control-sm" type="file" onChange={FileChange}/>
